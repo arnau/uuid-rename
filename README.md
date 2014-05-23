@@ -20,16 +20,7 @@ From the app package:
 2. Select the desired files.
 3. Press «Choose.»
 
-Note that the execution creates a backup directory named after the directory
-for the given file collection. To run again the script you must remove this
-backup.
-
-
-## Nice to have
-
-* Backup only the selected files.
-* Not assume all files are in the same directory.
-
+Note that any execution creates a backup for any given file at `~/uuid-rename.bak/`
 
 ## License
 
