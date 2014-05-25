@@ -173,7 +173,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>479.000000:846.000000</string>
+				<string>479.000000:652.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Ask for Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -231,10 +231,6 @@
 					<key>COMMAND_STRING</key>
 					<string>require 'pathname'
 require 'securerandom'
-require 'fileutils'
-
-bak_dir = "#{ENV['HOME']}/uuid-rename.bak"
-FileUtils.mkdir_p(bak_dir)
 
 ARGV.each do |item|
   path = Pathname(item)
@@ -242,8 +238,6 @@ ARGV.each do |item|
   dt = (Time.now.utc.to_f * 1000000).to_i
   file = path.expand_path
   uuid_path = file.dirname.join("#{dt}-#{uuid}#{file.extname}")
-
-  FileUtils.cp(file, bak_dir)
 
   file.rename(uuid_path)
 end
@@ -363,7 +357,7 @@ at_exit { puts "UUID rename finished successfully." }</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>479.000000:691.000000</string>
+				<string>479.000000:497.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -473,7 +467,7 @@ at_exit { puts "UUID rename finished successfully." }</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>479.000000:314.000000</string>
+				<string>479.000000:313.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -611,7 +605,7 @@ at_exit { puts "UUID rename finished successfully." }</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>479.000000:210.000000</string>
+				<string>479.000000:209.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Display Notification.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -621,26 +615,26 @@ at_exit { puts "UUID rename finished successfully." }</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>1FF4DD0F-13D6-4211-859F-0E74D4242A17</key>
+		<key>0C83192A-F8F3-41A3-B8CB-B6A13199EEE1</key>
 		<dict>
 			<key>from</key>
-			<string>CF568C51-C0B1-4984-8467-DA66C6FFECBC - CF568C51-C0B1-4984-8467-DA66C6FFECBC</string>
+			<string>BEA9D72C-0494-4401-84FD-54BF9E6A9F05 - BEA9D72C-0494-4401-84FD-54BF9E6A9F05</string>
 			<key>to</key>
-			<string>487AB495-0B08-4336-B24A-471108BA8FDB - 487AB495-0B08-4336-B24A-471108BA8FDB</string>
+			<string>CF568C51-C0B1-4984-8467-DA66C6FFECBC - CF568C51-C0B1-4984-8467-DA66C6FFECBC</string>
 		</dict>
-		<key>83C99F3C-0ACA-47D1-96D2-BDCE8DA856AC</key>
+		<key>36892C59-0505-4B13-B958-66173EC2B776</key>
 		<dict>
 			<key>from</key>
 			<string>B5F689B7-6161-4B4A-BD88-B7CB18CC4C47 - B5F689B7-6161-4B4A-BD88-B7CB18CC4C47</string>
 			<key>to</key>
 			<string>BEA9D72C-0494-4401-84FD-54BF9E6A9F05 - BEA9D72C-0494-4401-84FD-54BF9E6A9F05</string>
 		</dict>
-		<key>ECDB2455-4A4C-470C-B336-2F62B5D95356</key>
+		<key>E49372BB-874F-43F8-BB4F-0B55E1D34D6B</key>
 		<dict>
 			<key>from</key>
-			<string>BEA9D72C-0494-4401-84FD-54BF9E6A9F05 - BEA9D72C-0494-4401-84FD-54BF9E6A9F05</string>
-			<key>to</key>
 			<string>CF568C51-C0B1-4984-8467-DA66C6FFECBC - CF568C51-C0B1-4984-8467-DA66C6FFECBC</string>
+			<key>to</key>
+			<string>487AB495-0B08-4336-B24A-471108BA8FDB - 487AB495-0B08-4336-B24A-471108BA8FDB</string>
 		</dict>
 	</dict>
 	<key>variables</key>
