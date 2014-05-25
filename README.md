@@ -1,18 +1,18 @@
-# UUID rename
+# Rename
 
 Simple utility to rename a collection of files using unique identifiers.
 
 Identifiers have the following pattern:
 
-    {timestamp}-{uuid}.{original extension} # if extension exists
-    {timestamp}-{uuid}
+    {timestamp}.{original extension} # if extension exists
+    {timestamp}
 
 
 ## Usage
 
 From the command line:
 
-    $ ruby uuid-rename.rb file [file...]
+    $ ruby rename.rb file [file...]
 
 From the app package:
 
@@ -20,7 +20,6 @@ From the app package:
 2. Select the desired files.
 3. Press «Choose.»
 
-Note that any execution creates a backup for any given file at `~/uuid-rename.bak/`
 
 ## License
 
